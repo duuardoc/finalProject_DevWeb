@@ -1,0 +1,168 @@
+/* foi decidido utilizarmos a medida "rem" para alguns itens - nao varia com a resolucao */
+
+:root{ /* Definicao de cores do site */
+
+    /* Paleta de cores padrao do site */
+
+    --background-color: #0e0e0e;
+    --font-color: #ffffff;
+
+    --add_button-color: #202020;
+    --add_button-color2: #161616;
+
+    --remove_button-color: #67c350;
+    --remove_button-color2: #33951a;
+
+    --footer_background-color: #333333;
+    --footer_font-color: #ffffff;
+
+}
+
+.palette_options{
+    position: fixed;
+    border: none;
+    outline: none;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#dark_palette{
+    background-color: rgb(59, 58, 58);
+    border: none;
+    outline: none;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+#light_palette{
+    background-color: blue;
+    border: none;
+    outline: none;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    
+}
+
+#pink_palette{
+    background-color: pink;
+    border: none;
+    outline: none;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+body {
+    /* margin: 0; */
+    font-family: "Lato";
+    background-color: var(--background-color); /* Cor fundo */
+    color: var(--font-color); /* Cor fonte */
+    display: flex;
+    flex-direction: column; /* um abaixo do outro */
+    align-items: center;
+    gap: 4rem; /* 1rem = 16 pixels */
+    transition: .4s;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.add_item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Responsividade */
+}
+
+#new_task,
+#new_task_button{
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    padding: 1rem; 
+}
+
+#new_task{
+    width: 20rem;
+    border-radius: 1rem; /* Deixa a borda arredondada */
+}
+
+#new_task_button{
+    background-color: var(--add_button-color);
+    color: var(--font-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: .4s; /* Tempo de transicao para mudanca de cor */
+}
+
+#new_task_button:hover{ /* Quando mouse passa por cima */
+    background-color: var(--add_button-color2);
+}
+
+#planner{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+#planner li{
+    list-style-type: none;
+    font-size: 1.4rem;
+    text-transform: uppercase; /* Primeira letra maiuscula */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#planner li:hover{
+background-color: var(--add_button-color2);
+transition: .4s;
+border-radius: 1rem;
+padding-left: 1rem;
+}
+
+#task_button{
+    border: none;
+    background-color: var(--remove_button-color);
+    color: var(--font-color);
+    font-size: 1rem;
+    padding: .4rem .8rem; /* .4 cima e baixo || .8 esquerda e direita */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    cursor: pointer;
+    transition: .4s;
+}
+
+#task_button:hover{
+    background-color: var(--remove_button-color2);
+}
+
+footer {
+    background-color: var(--footer_background-color);
+    color: var(--footer_font-color);
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
